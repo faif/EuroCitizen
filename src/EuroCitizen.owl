@@ -1,0 +1,2273 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.it.teithe.gr/~kasamath/web_ontologies/EuroCitizen.owl#"
+    xmlns:p1="http://www.owl-ontologies.com/assert.owl#"
+  xml:base="http://www.it.teithe.gr/~kasamath/web_ontologies/EuroCitizen.owl">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo xml:lang="en">0.1</owl:versionInfo>
+    <rdfs:comment xml:lang="en">EuroCitizen.owl A Web Ontology about European citizens Copyright 
+    (C) 2006, 2007 Alexander Technological Educational Institute of 
+    Thessaloniki Copyright (C) 2006, 2007 Athanasios Kasampalis [ kasamath at 
+    it period teithe period gr ] This program is free software; you can 
+    redistribute it and/or modify it under the terms of the GNU General Public 
+    License as published by the Free Software Foundation; either version 2 of 
+    the License, or (at your option) any later version. This program is 
+    distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+    without even the implied warranty of MERCHANTABILITY or FITNESS FOR A 
+    PARTICULAR PURPOSE. See the GNU General Public License for more details. 
+    You should have received a copy of the GNU General Public License along 
+    with this program; if not, write to the Free Software Foundation, Inc., 51 
+    Franklin St, Fifth Floor, Boston, MA 02110-1301 USA The main target of the 
+    proposal is to investigate, describe and finally, define the main 
+    characteristics of the notion of the digital analogue to the socially and 
+    politically active European citizen through the use of ontologies 
+    (EuroCitizen). EuropeanOntoCitizens will educate, support and help 
+    European citizens and promote efficacy of society. The identity of a 
+    European citizen is two-fold. One is the physical/biological identity 
+    related to his DNA, and the other is related to the European environment 
+    and culture. Similarly, the identity of the EuroCitizen will be 
+    two-fold. One side refers to its existence and the other to the rules of 
+    actions that govern the interactions and relationships among them.</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The EuroCitizen ontology uses a modified version of the New Testament Names (NTN) ontology (http://www.semanticbible.com/ntn/ntn-overview.html), which can be downloaded from http://www.semanticbible.com/ntn/ntn-view.html.</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:ID="StateOrProvince">
+    <rdfs:comment xml:lang="en">Based on SUMO, http://reliant.teknowledge.com/DAML/SUMO.owl#StateOrProvince
+SUO 1.55: July 14, 2003
+Administrative subdivisions of a
+&amp;%Nation that are broader than any other political subdivisions that
+may exist.  This &amp;%Class includes the states of the United States, as
+well as the provinces of Canada and European countries.
+Here it covers both provinces and districts.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="City"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Nation"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Island"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Mountain"/>
+    </owl:disjointWith>
+    <rdfs:label xml:lang="en">State or Province</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="LandArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="GroupOfPeople">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Group"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Group of People</rdfs:label>
+    <rdfs:comment xml:lang="en">Comparable to http://reliant.teknowledge.com/DAML/SUMO.owl#GroupOfPeople
+SUO 1.55: July 14, 2003
+Any &amp;%Group whose &amp;%members are
+exclusively &amp;%Humans.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Organization">
+    <rdfs:subClassOf rdf:resource="#GroupOfPeople"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="BeliefGroup"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="EthnicGroup"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ResidenceGroup"/>
+    </owl:disjointWith>
+    <rdfs:label xml:lang="en">Organization</rdfs:label>
+    <rdfs:comment xml:lang="en">Comparable to http://reliant.teknowledge.com/DAML/SUMO.owl#Organization
+SUO 1.55: July 14, 2003
+An &amp;%Organization is a corporate or similar institution. The &amp;%members of an &amp;%Organization typically have a common purpose or function. Note that this class also covers divisions, departments, etc. of organizations.  For example, both the Shell Corporation and the accounting department at Shell would both be instances of &amp;%Organization.  Note too that the existence of an &amp;%Organization is dependent on the existence of at least one &amp;%member (since &amp;%Organization is a subclass of &amp;%Collection).  Accordingly, in cases of purely legal organizations, a fictitious &amp;%member 
+should be assumed.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Hockey">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="IceHockey"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A game resembling ice hockey that is played on an open field; two opposing teams use curved sticks try to drive a ball into the opponents' net.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="OnTheWater">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="WaterSport"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="InTheWater"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">Sports in which the athlete is above the water surface.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ContentBearingObject">
+    <rdfs:comment xml:lang="en">Broadly the same as http://reliant.teknowledge.com/DAML/SUMO.owl#ContentBearingObject
+SUO 1.55: July 14, 2003
+Any &amp;%SelfConnectedObject that expresses 
+information.</rdfs:comment>
+    <rdfs:label xml:lang="en">Content Bearing Object</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Agent"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Fluid"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="PhysicalObject"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Region"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Object"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="BeliefSystem">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Culture"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="GeographicLocation"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="HumanAttribute"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Object"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Process"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">An organization of propositions into an identifiable belief system. A person who holds to a belief system can be considered a member of the corresponding BeliefGroup.
+
+The notion of Proposition here is derived from http://reliant.teknowledge.com/DAML/SUMO.owl#Proposition.</rdfs:comment>
+    <rdfs:label xml:lang="en">Belief system</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CombatSport">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="TargetSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="RacketSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="TeamSport"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">Sports which include combat.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="SnowBoardSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#WaterSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="AdventureSport"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Sport"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="AthleticsSport"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Culture">
+    <owl:disjointWith rdf:resource="#BeliefSystem"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#GeographicLocation"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#HumanAttribute"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Object"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Process"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">All the knowledge and values shared by a society.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Card">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#PhysicalObject"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Thin cardboard, usually rectangular.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Christians">
+    <rdfs:comment xml:lang="en">Categories of christian groups.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BeliefGroup"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Island">
+    <rdfs:comment xml:lang="en">Based on SUMO, http://reliant.teknowledge.com/DAML/SUMO.owl#Island
+SUO 1.55: July 14, 2003
+A &amp;%LandArea that is completely surrounded by a &amp;%WaterArea.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LandArea"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Island</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#City"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Mountain"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Nation"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#StateOrProvince"/>
+  </owl:Class>
+  <owl:Class rdf:about="#EthnicGroup">
+    <rdfs:label xml:lang="en">Ethnic Group</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BeliefGroup"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Organization"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ResidenceGroup"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">Comparable to http://reliant.teknowledge.com/DAML/SUMO.owl#EthnicGroup
+SUO 1.55: July 14, 2003
+A &amp;%Group whose &amp;%members originate from
+the same &amp;%GeographicArea or share the same &amp;%Language and/or cultural
+practices.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GroupOfPeople"/>
+  </owl:Class>
+  <owl:Class rdf:ID="BloodGroup">
+    <rdfs:comment xml:lang="en">Blood cells (usually just the red blood cells) that have the same antigens.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Blood"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ResidenceGroup">
+    <rdfs:label xml:lang="en">Residence Group</rdfs:label>
+    <rdfs:comment xml:lang="en">A group identified by common residence in a City or StateOrProvince. At the level of Nation, this should generally be EthnicGroup. Unlike EthnicGroup, they need not have cultural or ethnic features in common.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#BeliefGroup"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#EthnicGroup"/>
+    <owl:disjointWith rdf:resource="#Organization"/>
+    <rdfs:subClassOf rdf:resource="#GroupOfPeople"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PhysicalObject">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Agent"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#ContentBearingObject"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Fluid"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Region"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Object"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Impelled by physical force especially against resistance.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ReligiousOrganization">
+    <rdfs:subClassOf rdf:resource="#Organization"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="PoliticalOrganization"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">Comparable to http://reliant.teknowledge.com/DAML/SUMO.owl#ReligiousOrganization SUO 1.55: July 14, 2003
+An &amp;amp;%Organization whose members share a set of religious beliefs.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Fluid">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Object"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Agent"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#ContentBearingObject"/>
+    <owl:disjointWith rdf:resource="#PhysicalObject"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Region"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">A continuous amorphous substance that tends to flow and to conform to the outline of its container.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="SaltWaterArea">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="FreshWaterArea"/>
+    </owl:disjointWith>
+    <rdfs:label xml:lang="en">Salt Water Area</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="WaterArea"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Based on SUMO, http://reliant.teknowledge.com/DAML/SUMO.owl#SaltWaterArea
+SUO 1.55: July 14, 2003
+A &amp;%WaterArea whose &amp;%Water is saline, e.g.
+oceans and seas.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="CognitiveAgent">
+    <rdfs:comment xml:lang="en">Comparable to http://reliant.teknowledge.com/DAML/SUMO.owl#CognitiveAgent
+SUO 1.55: July 14, 2003
+A &amp;%SentientAgent with responsibilities 
+and the ability to reason, deliberate, make plans, etc.  This is 
+essentially the legal/ethical notion of a person.  Note that, although 
+&amp;%Human is a subclass of &amp;%CognitiveAgent, there may be instances of 
+&amp;%CognitiveAgent which are not also instances of &amp;%Human.  For example, 
+chimpanzees, gorillas, dolphins, whales, and some extraterrestrials 
+(if they exist) may be &amp;%CognitiveAgents.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Group"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Agent"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Cognitive Agent</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="PoliticalAttribute">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="CitizenshipAttribute"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="EthnicityAttribute"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ReligiousBelief"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ResidencyAttribute"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">The attribute of ascribing to a PoliticalBeliefSystem, or belonging to a political party or system.</rdfs:comment>
+    <rdfs:label xml:lang="en">Political attribute</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#HumanAttribute"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="RhesusBloodGroupSystem">
+    <rdfs:comment xml:lang="en">The term Rhesus system refers to all of the antigens of the Rhesus blood group system - the five main rhesus antigens (C, c,D, E and e) as well as many other less frequent antigens. The terms Rhesus factor and Rh factor are equivalent and refer to the Rh D antigen only.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="HumanBloodGroup"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#SnowBoardSport">
+    <rdfs:comment xml:lang="en">Sport related with snow sliding.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#WaterSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TargetSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#RacketSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AthleticsSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AdventureSport"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Sport"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#CombatSport"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TeamSport"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Christianity">
+    <rdfs:comment xml:lang="en">A monotheistic system of beliefs and practices based on the Old Testament and the teachings of Jesus as embodied in the New Testament and emphasizing the role of Jesus as savior.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ReligiousBeliefSystem"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#TeamSport">
+    <rdfs:comment xml:lang="en">Sports that involve teams.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TargetSport"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Sport"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#CombatSport"/>
+    <owl:disjointWith rdf:resource="#SnowBoardSport"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#RacketSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AdventureSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#WaterSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AthleticsSport"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#HumanAttribute">
+    <owl:disjointWith rdf:resource="#BeliefSystem"/>
+    <owl:disjointWith rdf:resource="#Culture"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#GeographicLocation"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Object"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Process"/>
+    </owl:disjointWith>
+    <rdfs:label xml:lang="en">Human attribute</rdfs:label>
+    <rdfs:comment xml:lang="en">Attributes of people, overlapping with the class hierarchy under suo:Group: this is unsatisfactory.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="PerformingArt">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Art"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Arts or skills that require public performance.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="VisualArt"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="IdentityCard">
+    <rdfs:subClassOf rdf:resource="#Card"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:InverseFunctionalProperty rdf:ID="isIdentityCardOf"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Human"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">An official document or plastic card with a person's name, date of birth, photograph or other information on it which proves his existence.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Process">
+    <rdfs:comment xml:lang="en">A particular course of action intended to achieve a result.</rdfs:comment>
+    <owl:disjointWith rdf:resource="#BeliefSystem"/>
+    <owl:disjointWith rdf:resource="#Culture"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#GeographicLocation"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#HumanAttribute"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Object"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Christian">
+    <rdfs:comment xml:lang="en">Categories of christians.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ReligiousBelief"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Character">
+    <rdfs:subClassOf rdf:resource="#ContentBearingObject"/>
+    <rdfs:comment xml:lang="en">Broadly the same as http://reliant.teknowledge.com/DAML/SUMO.owl#Character
+SUO 1.55: July 14, 2003
+An element of an alphabet, a set of numerals, etc.
+Note that a &amp;%Character may or may not be part of a &amp;%Language.  &amp;%Character
+is a subclass of &amp;%SymbolicString, because every instance of &amp;%Character is
+an alphanumeric sequence consisting of a single element.</rdfs:comment>
+    <rdfs:label xml:lang="en">Character</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="NaturalLanguage"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Series"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#FreshWaterArea">
+    <owl:disjointWith rdf:resource="#SaltWaterArea"/>
+    <rdfs:comment xml:lang="en">Based on SUMO, http://reliant.teknowledge.com/DAML/SUMO.owl#FreshWaterArea
+
+SUO 1.55: July 14, 2003
+A &amp;%WaterArea whose &amp;%Water is not saline,
+e.g. most rivers and lakes.</rdfs:comment>
+    <rdfs:label xml:lang="en">Fresh Water Area</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#WaterArea"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Object">
+    <rdfs:comment xml:lang="en">Following http://reliant.teknowledge.com/DAML/SUMO.owl#Object, this "Corresponds roughly to the class of ordinary 
+objects.  Examples include normal physical objects, geographical regions, 
+and locations of &amp;%Processes, the complement of &amp;%Objects in the &amp;%Physical class. "</rdfs:comment>
+    <rdfs:label xml:lang="en">Object</rdfs:label>
+    <owl:disjointWith rdf:resource="#BeliefSystem"/>
+    <owl:disjointWith rdf:resource="#Culture"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#GeographicLocation"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#HumanAttribute"/>
+    <owl:disjointWith rdf:resource="#Process"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GeographicArea">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Region"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Geographic Area</rdfs:label>
+    <rdfs:comment xml:lang="en">Based on SUMO, http://reliant.teknowledge.com/DAML/SUMO.owl#GeographicArea
+SUO 1.55: July 14, 2003
+A geographic location, generally having 
+definite boundaries.  Note that this differs from its immediate superclass 
+&amp;%Region in that a &amp;%GeographicArea is a three-dimensional &amp;%Region of the 
+earth.  Accordingly, all astronomical objects other than earth and all 
+one-dimensional and two-dimensional &amp;%Regions are not classed under 
+&amp;%GeographicArea.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Group">
+    <rdfs:comment xml:lang="en">Comparable to http://reliant.teknowledge.com/DAML/SUMO.owl#Group
+SUO 1.55: July 14, 2003
+A &amp;%Collection of &amp;%Agents, e.g. a flock
+of sheep, a herd of goats, or the local Boy Scout troop.</rdfs:comment>
+    <rdfs:label xml:lang="en">Group</rdfs:label>
+    <owl:disjointWith rdf:resource="#CognitiveAgent"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Agent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#PoliticalOrganization">
+    <rdfs:label xml:lang="en">Political Organization</rdfs:label>
+    <rdfs:comment xml:lang="en">Comparable to http://reliant.teknowledge.com/DAML/SUMO.owl#PoliticalOrganization
+SUO 1.55: July 14, 2003
+An &amp;%Organization that is a &amp;%Government,
+a &amp;%subOrganization of a &amp;%Government, or an &amp;%Organization that is attempting
+to bring about some sort of political change.</rdfs:comment>
+    <owl:disjointWith rdf:resource="#ReligiousOrganization"/>
+    <rdfs:subClassOf rdf:resource="#Organization"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Mountain">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#LandArea"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Mountain</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#City"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Island"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Nation"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#StateOrProvince"/>
+    <rdfs:comment xml:lang="en">Wordnet: "a land mass that projects well above its surroundings; higher than a hill. "
+Used here for things referred to as "mount", even though some of these might seem
+like hills to well-traveled observers. </rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Series">
+    <rdfs:subClassOf rdf:resource="#ContentBearingObject"/>
+    <rdfs:label xml:lang="en">Series</rdfs:label>
+    <owl:disjointWith rdf:resource="#Character"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#NaturalLanguage"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">Broadly the same as http://reliant.teknowledge.com/DAML/SUMO.owl#Series
+SUO 1.55: July 14, 2003
+A &amp;%Text consisting of multiple self-contained units.  
+Some examples are an encyclopedia containing a couple dozen volumes, a television 
+series made up of many episodes, a film serial, etc.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Human">
+    <rdfs:label xml:lang="en">Human</rdfs:label>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TODO: Create a EuroCitizen class which will replace the Human class in a consistent manner?</owl:versionInfo>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#CognitiveAgent"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#IdentityCard"/>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:ID="hasIdentityCard"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="#hasIdentityCard"/>
+            </owl:onProperty>
+            <owl:allValuesFrom rdf:resource="#IdentityCard"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class rdf:about="#EthnicityAttribute"/>
+            </owl:allValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="ethnicity"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#EthnicityAttribute"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#ethnicity"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#RhesusBloodGroupSystem"/>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:ID="hasRhesusBloodGroup"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="#RhesusBloodGroupSystem"/>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="#hasRhesusBloodGroup"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Region"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:ID="nativePlace"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:FunctionalProperty rdf:about="#nativePlace"/>
+            </owl:onProperty>
+            <owl:allValuesFrom>
+              <owl:Class rdf:about="#Region"/>
+            </owl:allValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="speaksLanguage"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#NaturalLanguage"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Comparable to http://reliant.teknowledge.com/DAML/SUMO.owl#Human
+SUO 1.55: July 14, 2003
+Modern man, the only remaining species of the Homo genus.</rdfs:comment>
+    <rdfs:comment xml:lang="en">WARNING: This class does not represent a human. It actually represents a European Citizen! I wanted to keep the structure of the NTN ontology as is (if not all of the parts the most of), and I also wanted the EuroCitizen ontology to be written in OWL DL and in a consistent manner (no warning, inconsistencies, etc), and that was the only way to do so.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Woman">
+    <rdfs:label xml:lang="en">Woman</rdfs:label>
+    <rdfs:comment xml:lang="en">SUO 1.55: July 14, 2003
+The class of &amp;%Female &amp;%Humans.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Man"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:SymmetricProperty rdf:ID="spouseOf"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Man"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Human"/>
+  </owl:Class>
+  <owl:Class rdf:about="#WaterSport">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AthleticsSport"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">Sports that involve water.</rdfs:comment>
+    <owl:disjointWith rdf:resource="#SnowBoardSport"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#RacketSport"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Sport"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AdventureSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TargetSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#CombatSport"/>
+    <owl:disjointWith rdf:resource="#TeamSport"/>
+  </owl:Class>
+  <owl:Class rdf:about="#WaterArea">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#LandArea"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#GeographicArea"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</owl:cardinality>
+        <owl:onProperty>
+          <owl:InverseFunctionalProperty rdf:ID="nativePlaceOf"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Based on SUMO, http://reliant.teknowledge.com/DAML/SUMO.owl#WaterArea
+SUO 1.55: July 14, 2003
+A body which is made up predominantly of water,
+e.g. rivers, lakes, oceans, etc.</rdfs:comment>
+    <rdfs:label xml:lang="en">Water Area</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#BeliefGroup">
+    <owl:disjointWith rdf:resource="#EthnicGroup"/>
+    <owl:disjointWith rdf:resource="#Organization"/>
+    <owl:disjointWith rdf:resource="#ResidenceGroup"/>
+    <rdfs:label xml:lang="en">Belief Group</rdfs:label>
+    <rdfs:comment xml:lang="en">Comparable to http://reliant.teknowledge.com/DAML/SUMO.owl#BeliefGroup
+SUO 1.55: July 14, 2003
+A &amp;%Group whose &amp;%members share a belief or
+set of beliefs.
+For NTN, this covers groups defined by a particular set of beliefs (orthodox or heretical) which are informal, rather than formal, in membership and activity.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#GroupOfPeople"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Man">
+    <owl:disjointWith rdf:resource="#Woman"/>
+    <rdfs:comment xml:lang="en">SUO 1.55: July 14, 2003
+The class of &amp;%Male &amp;%Humans.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:SymmetricProperty rdf:about="#spouseOf"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Woman"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Human"/>
+    <rdfs:label xml:lang="en">Man</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#IceHockey">
+    <rdfs:comment xml:lang="en">A game played on an ice rink by two opposing teams of six skaters each who try to knock a flat round puck into the opponents' goal with angled sticks.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#TeamSport"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Art">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Sport"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#Culture"/>
+    <rdfs:comment xml:lang="en">The products of human creativity.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#LandArea">
+    <owl:disjointWith rdf:resource="#WaterArea"/>
+    <rdfs:comment xml:lang="en">Based on SUMO, http://reliant.teknowledge.com/DAML/SUMO.owl#LandArea
+SUO 1.55: July 14, 2003
+An area which is predominantly solid ground,
+e.g. a &amp;%Nation, a mountain, a desert, etc.  Note that a &amp;%LandArea may
+contain some relatively small &amp;%WaterAreas.  For example, Australia is
+a &amp;%LandArea even though it contains various rivers and lakes.</rdfs:comment>
+    <rdfs:label xml:lang="en">Land Area</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#GeographicArea"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Agent">
+    <rdfs:label xml:lang="en">Agent</rdfs:label>
+    <rdfs:comment xml:lang="en">Comparable to http://reliant.teknowledge.com/DAML/SUMO.owl#Agent
+SUO 1.55: July 14, 2003
+Something or someone that can act on its own and 
+produce changes in the world.</rdfs:comment>
+    <owl:disjointWith rdf:resource="#ContentBearingObject"/>
+    <owl:disjointWith rdf:resource="#Fluid"/>
+    <owl:disjointWith rdf:resource="#PhysicalObject"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Region"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#Object"/>
+  </owl:Class>
+  <owl:Class rdf:about="#GeographicLocation">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A collection of properties describing geographic location. </rdfs:comment>
+    <owl:disjointWith rdf:resource="#BeliefSystem"/>
+    <owl:disjointWith rdf:resource="#Culture"/>
+    <owl:disjointWith rdf:resource="#HumanAttribute"/>
+    <owl:disjointWith rdf:resource="#Object"/>
+    <owl:disjointWith rdf:resource="#Process"/>
+    <rdfs:label xml:lang="en">Geographic Location</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#City">
+    <rdfs:subClassOf rdf:resource="#LandArea"/>
+    <rdfs:comment xml:lang="en">Based on SUMO, http://reliant.teknowledge.com/DAML/SUMO.owl#City
+SUO 1.55: July 14, 2003
+A &amp;%LandArea of relatively small size, inhabited
+by a community of people, and having some sort of political structure.
+Note that this class includes both large cities and small settlements
+like towns, villages, hamlets, etc.</rdfs:comment>
+    <rdfs:label xml:lang="en">City</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Nation"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#StateOrProvince"/>
+    <owl:disjointWith rdf:resource="#Island"/>
+    <owl:disjointWith rdf:resource="#Mountain"/>
+  </owl:Class>
+  <owl:Class rdf:about="#TargetSport">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#RacketSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#TeamSport"/>
+    <owl:disjointWith rdf:resource="#WaterSport"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Sport"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#CombatSport"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AthleticsSport"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">Sports where the main objective is to hit a certain target.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AdventureSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SnowBoardSport"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Region">
+    <rdfs:comment xml:lang="en">Comparable to http://reliant.teknowledge.com/DAML/SUMO.owl#Region: "A topographic location.  Regions encompass surfaces of Objects, imaginary places, and GeographicAreas. "</rdfs:comment>
+    <rdfs:label xml:lang="en">Region</rdfs:label>
+    <owl:disjointWith rdf:resource="#Agent"/>
+    <owl:disjointWith rdf:resource="#ContentBearingObject"/>
+    <owl:disjointWith rdf:resource="#Fluid"/>
+    <owl:disjointWith rdf:resource="#PhysicalObject"/>
+    <rdfs:subClassOf rdf:resource="#Object"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PoliticalBeliefSystem">
+    <rdfs:comment xml:lang="en">A system of political (the profession devoted to governing and to political affairs) beliefs.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ReligiousBeliefSystem"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#BeliefSystem"/>
+    <rdfs:label xml:lang="en">Political belief system</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#CitizenshipAttribute">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Citizenship attribute</rdfs:label>
+    <rdfs:comment xml:lang="en">Belonging to the citizenry of a country (e.g. Roman). There may be parallel ethnicity attributes (Roman being the primary example) which are not easily distinguished. In the case of Roman, while all ethnic Romans (in the general sense, though not necessarily legal sense [e.g. slaves]) are Roman citizens, there are other Roman citizens (e.g. Paul) who have different ethnicity.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#HumanAttribute"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#EthnicityAttribute"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#PoliticalAttribute"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ReligiousBelief"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ResidencyAttribute"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#ReligiousBeliefSystem">
+    <owl:disjointWith rdf:resource="#PoliticalBeliefSystem"/>
+    <rdfs:label xml:lang="en">Religious belief system</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#BeliefSystem"/>
+    <rdfs:comment xml:lang="en">A system of religious beliefs, or a philosophy.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#HumanBloodGroup">
+    <rdfs:comment xml:lang="en">Human blood types.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#BloodGroup"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Nation">
+    <rdfs:comment xml:lang="en">Based on SUMO, http://reliant.teknowledge.com/DAML/SUMO.owl#Nation
+SUO 1.55: July 14, 2003
+The broadest &amp;%GeopoliticalArea, i.e. &amp;%Nations are
+&amp;%GeopoliticalAreas that are not part of any other overarching and
+comprehensive governance structure (excepting commonwealths and other sorts
+of loose international organizations).
+Note that modern nations referred to in the New Testament (Spain,
+Italy, Libya) are typically not instances of Nation, but rather
+of Region (if the borders are indefinite) or of LandArea.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#LandArea"/>
+    <rdfs:label xml:lang="en">Nation</rdfs:label>
+    <owl:disjointWith rdf:resource="#City"/>
+    <owl:disjointWith rdf:resource="#StateOrProvince"/>
+    <owl:disjointWith rdf:resource="#Island"/>
+    <owl:disjointWith rdf:resource="#Mountain"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Sport">
+    <rdfs:comment xml:lang="en">An active diversion requiring physical exertion and competition.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Process"/>
+    <owl:disjointWith rdf:resource="#Art"/>
+  </owl:Class>
+  <owl:Class rdf:about="#AdventureSport">
+    <rdfs:subClassOf rdf:resource="#Sport"/>
+    <owl:disjointWith rdf:resource="#TargetSport"/>
+    <owl:disjointWith rdf:resource="#TeamSport"/>
+    <owl:disjointWith rdf:resource="#CombatSport"/>
+    <owl:disjointWith rdf:resource="#SnowBoardSport"/>
+    <rdfs:comment xml:lang="en">Risky sports.</rdfs:comment>
+    <owl:disjointWith rdf:resource="#WaterSport"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AthleticsSport"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#RacketSport"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Blood">
+    <rdfs:subClassOf rdf:resource="#Fluid"/>
+    <rdfs:comment xml:lang="en">The fluid (red in vertebrates) that is pumped by the heart.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VisualArt">
+    <rdfs:comment xml:lang="en">The visual arts are a class of art forms, including painting, sculpture, photography, printmaking and others, that focus on the creation of works which are primarily visual in nature.</rdfs:comment>
+    <owl:disjointWith rdf:resource="#PerformingArt"/>
+    <rdfs:subClassOf rdf:resource="#Art"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ReligiousBelief">
+    <rdfs:subClassOf rdf:resource="#HumanAttribute"/>
+    <owl:disjointWith rdf:resource="#CitizenshipAttribute"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#EthnicityAttribute"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#PoliticalAttribute"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ResidencyAttribute"/>
+    </owl:disjointWith>
+    <rdfs:label xml:lang="en">Religious belief</rdfs:label>
+    <rdfs:comment xml:lang="en">The attribute of ascribing to a ReligiousBeliefSystem (which includes philosophies).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#EthnicityAttribute">
+    <rdfs:comment xml:lang="en">The attribute of belonging to a particular ethnic group, or originating from a GeographicArea. Unlike Residency, which can change, Ethnicity is considered permanent.</rdfs:comment>
+    <owl:disjointWith rdf:resource="#CitizenshipAttribute"/>
+    <owl:disjointWith rdf:resource="#PoliticalAttribute"/>
+    <owl:disjointWith rdf:resource="#ReligiousBelief"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ResidencyAttribute"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#HumanAttribute"/>
+    <rdfs:label xml:lang="en">Ethnicity attribute</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#RacketSport">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#AthleticsSport"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#Sport"/>
+    <owl:disjointWith rdf:resource="#AdventureSport"/>
+    <owl:disjointWith rdf:resource="#WaterSport"/>
+    <owl:disjointWith rdf:resource="#CombatSport"/>
+    <owl:disjointWith rdf:resource="#TeamSport"/>
+    <owl:disjointWith rdf:resource="#SnowBoardSport"/>
+    <rdfs:comment xml:lang="en">Sports where a player use a racquet (or racket) to hit a ball or other objects.</rdfs:comment>
+    <owl:disjointWith rdf:resource="#TargetSport"/>
+  </owl:Class>
+  <owl:Class rdf:about="#AthleticsSport">
+    <owl:disjointWith rdf:resource="#TargetSport"/>
+    <owl:disjointWith rdf:resource="#CombatSport"/>
+    <owl:disjointWith rdf:resource="#AdventureSport"/>
+    <rdfs:comment xml:lang="en">Track and field sports.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Sport"/>
+    <owl:disjointWith rdf:resource="#RacketSport"/>
+    <owl:disjointWith rdf:resource="#SnowBoardSport"/>
+    <owl:disjointWith rdf:resource="#TeamSport"/>
+    <owl:disjointWith rdf:resource="#WaterSport"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Tennis">
+    <rdfs:comment xml:lang="en">A game played with rackets by two or four players who hit a ball back and forth over a net that divides the court.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#RacketSport"/>
+  </owl:Class>
+  <owl:Class rdf:about="#InTheWater">
+    <rdfs:comment xml:lang="en">Sports in which the athlete is below the water surface.</rdfs:comment>
+    <owl:disjointWith rdf:resource="#OnTheWater"/>
+    <rdfs:subClassOf rdf:resource="#WaterSport"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MartialArt">
+    <rdfs:subClassOf rdf:resource="#CombatSport"/>
+    <rdfs:comment xml:lang="en">Any of several Oriental arts of weaponless self-defense; usually practiced as a sport.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Boxing"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#ResidencyAttribute">
+    <rdfs:comment xml:lang="en">The attribute of living in a particular City or Province. Unlike Ethnicity, which is permanent, Residency can change.</rdfs:comment>
+    <rdfs:label xml:lang="en">Residency attribute</rdfs:label>
+    <owl:disjointWith rdf:resource="#CitizenshipAttribute"/>
+    <owl:disjointWith rdf:resource="#EthnicityAttribute"/>
+    <owl:disjointWith rdf:resource="#PoliticalAttribute"/>
+    <owl:disjointWith rdf:resource="#ReligiousBelief"/>
+    <rdfs:subClassOf rdf:resource="#HumanAttribute"/>
+  </owl:Class>
+  <owl:Class rdf:about="#NaturalLanguage">
+    <rdfs:comment xml:lang="en">Broadly the same as http://reliant.teknowledge.com/DAML/SUMO.owl#NaturalLanguage
+SUO 1.55: July 14, 2003
+The &amp;%subclass of &amp;%HumanLanguages which
+are not designed and which evolve from generation to generation.  This
+&amp;%Class includes all of the national languages, e.g. English, Spanish,
+Japanese, etc.  Note that this class includes dialects of natural
+languages.</rdfs:comment>
+    <owl:disjointWith rdf:resource="#Character"/>
+    <owl:disjointWith rdf:resource="#Series"/>
+    <rdfs:subClassOf rdf:resource="#ContentBearingObject"/>
+    <rdfs:label xml:lang="en">Natural Language</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Boxing">
+    <owl:disjointWith rdf:resource="#MartialArt"/>
+    <rdfs:comment xml:lang="en">Fighting with the fists.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#CombatSport"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="residentPlaceOf">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="residentPlace"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="visitedPlaceOf"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Human"/>
+          <owl:Class rdf:about="#GroupOfPeople"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#Region"/>
+    <rdfs:comment xml:lang="en">The reverse of the residentPlace property.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#residentPlace">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="visitedPlace"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment xml:lang="en">The location a person or group of people resides in. Range values may change over time: no attempt is made to capture this. Transient residence of very short duration is assumed to be visited, not resident. People addressed in a letter bound for a specific destination (e.g. the epistle of Paul to the Romans) are assumed to be resident there unless there is indication to the contrary (since the timing of a letter's arrival could not be determined with high precision). </rdfs:comment>
+    <rdfs:range rdf:resource="#Region"/>
+    <owl:inverseOf rdf:resource="#residentPlaceOf"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Human"/>
+          <owl:Class rdf:about="#GroupOfPeople"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:label xml:lang="en">resident place</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasFavoriteSport">
+    <rdfs:range rdf:resource="#Sport"/>
+    <rdfs:comment xml:lang="en">The favorite sport of a cognitive agent.</rdfs:comment>
+    <rdfs:domain rdf:resource="#CognitiveAgent"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#visitedPlaceOf">
+    <rdfs:domain rdf:resource="#Region"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Human"/>
+          <owl:Class rdf:about="#GroupOfPeople"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="#visitedPlace"/>
+    </owl:inverseOf>
+    <rdfs:comment xml:lang="en">The reverse of the visitedPlace property.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="enemyOf">
+    <rdfs:comment xml:lang="en">"A person towards whom this person feels hatred, intends injury to, or opposes the interests of", similar to http://purl.org/vocab/relationship vocabulary, but with different domain and range. For clarity, &lt;X, enemyOf, Y> means X feels hatred, etc. towards Y, and also (by inference) &lt;Y, hasEnemy, X>. However, it does _not_ necessarily mean &lt;Y, enemyOf, X>, i.e. it is not necessarily reciprocal.</rdfs:comment>
+    <rdfs:label xml:lang="en">enemy of</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:ID="knows"/>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="hasEnemy"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="religiousBelief">
+    <rdfs:label xml:lang="en">religious belief</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="religiousBeliefOf"/>
+    </owl:inverseOf>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Human"/>
+          <owl:Class rdf:about="#GroupOfPeople"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#ReligiousBeliefSystem"/>
+    <rdfs:comment xml:lang="en">Having a ReligiousBelief as an attribute.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasEnemy">
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="#knows"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#Human"/>
+    <rdfs:label xml:lang="en">has enemy</rdfs:label>
+    <rdfs:comment xml:lang="en">inverse of enemyOf, which is not necessarily reciprocal</rdfs:comment>
+    <rdfs:domain rdf:resource="#Human"/>
+    <owl:inverseOf rdf:resource="#enemyOf"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="memberOf">
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:label xml:lang="en">member of</rdfs:label>
+    <rdfs:range rdf:resource="#Group"/>
+    <rdfs:comment xml:lang="en">Human is a memberOf a Group. Inverse of member. There are subtleties about Collections in SUMO that i'm omiting here.</rdfs:comment>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="member"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasAntagonist">
+    <rdfs:domain rdf:resource="#Human"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="antagonistOf"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="#knows"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">has antagonist</rdfs:label>
+    <rdfs:comment xml:lang="en">inverse of antagonistOf, which is not necessarily reciprocal</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="politicalBelief">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Human"/>
+          <owl:Class rdf:about="#GroupOfPeople"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:label xml:lang="en">political belief</rdfs:label>
+    <rdfs:range rdf:resource="#PoliticalBeliefSystem"/>
+    <rdfs:comment xml:lang="en">Holding to a PoliticalBelief.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#ethnicity">
+    <rdfs:comment xml:lang="en">The ethnicity or, more generally, cultural heritage of a person. This can overlap with both religiousBelief (which may, however, change over time) and nativePlace (which, like ethnicity, does not change, though residency might). Whether a given property represents ethnicity or citizenship (nativePlace) can be a difficult decision, but in general, ethnic identities like "Jewish" or "Greek" take precedence. For example, we consider the Apostle Paul to have Jewish ethnicity, though he was a citizen of Tarsus, because he was raised as a Jew. Ethnicity is not specified without specific evidence, either textual or reliable tradition: for example, having a Greek name is not sufficient. </rdfs:comment>
+    <rdfs:label xml:lang="en">ethnicity</rdfs:label>
+    <rdfs:domain rdf:resource="#Human"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="ethnicityOf"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#EthnicityAttribute"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="parentOf">
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:label xml:lang="en">parent of</rdfs:label>
+    <rdfs:range rdf:resource="#Human"/>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:ID="relativeOf"/>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="childOf"/>
+    </owl:inverseOf>
+    <rdfs:comment xml:lang="en">Similar to http://purl.org/vocab/relationship vocabulary, but with different domain and range.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#visitedPlace">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Human"/>
+          <owl:Class rdf:about="#GroupOfPeople"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:label xml:lang="en">visited place</rdfs:label>
+    <owl:inverseOf rdf:resource="#visitedPlaceOf"/>
+    <rdfs:comment xml:lang="en">Places that a human visited. For current purposes, only instances which are explicitly mentioned in Scripture are included, not those that might be inferred (e.g. if going from from A to B implies visiting C, C would not be listed). </rdfs:comment>
+    <rdfs:range rdf:resource="#Region"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasCulture">
+    <rdfs:comment xml:lang="en">A human's culture.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:range rdf:resource="#Culture"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#ethnicityOf">
+    <rdfs:comment xml:lang="en">The reverse of the ethnicity property.</rdfs:comment>
+    <rdfs:label xml:lang="en">ethnicity of</rdfs:label>
+    <rdfs:domain rdf:resource="#EthnicityAttribute"/>
+    <owl:inverseOf rdf:resource="#ethnicity"/>
+    <rdfs:range rdf:resource="#Human"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#member">
+    <rdfs:range rdf:resource="#Human"/>
+    <owl:inverseOf rdf:resource="#memberOf"/>
+    <rdfs:comment xml:lang="en">Group has member Human. Inverse of memberOf. No provision for membership changes over time.</rdfs:comment>
+    <rdfs:label xml:lang="en">member</rdfs:label>
+    <rdfs:domain rdf:resource="#Group"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#antagonistOf">
+    <rdfs:label xml:lang="en">antagonist of</rdfs:label>
+    <rdfs:comment xml:lang="en">"A person who opposes and contends against this person", similar to http://purl.org/vocab/relationship vocabulary, but with different domain and range. For clarity, &lt;X antagonistOf Y> means X opposes, etc. Y, and also (by inference) &lt;Y hasAntagonist X>. However, it does _not_ necessarily mean &lt;Y antagonistOf X>, i.e. it is not necessarily reciprocal.</rdfs:comment>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="#knows"/>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf rdf:resource="#hasAntagonist"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#childOf">
+    <rdfs:comment xml:lang="en">Similar to http://purl.org/vocab/relationship vocabulary, but with different domain and range. In-laws are considered relatives. </rdfs:comment>
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="#relativeOf"/>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf rdf:resource="#parentOf"/>
+    <rdfs:range rdf:resource="#Human"/>
+    <rdfs:label xml:lang="en">child of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#religiousBeliefOf">
+    <rdfs:label xml:lang="en">religious belief of</rdfs:label>
+    <rdfs:domain rdf:resource="#ReligiousBeliefSystem"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Human"/>
+          <owl:Class rdf:about="#GroupOfPeople"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:comment xml:lang="en">The reverse of the religiousBelief property.</rdfs:comment>
+    <owl:inverseOf rdf:resource="#religiousBelief"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#speaksLanguage">
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:comment xml:lang="en">A language a European citizen speaks.</rdfs:comment>
+    <rdfs:range rdf:resource="#NaturalLanguage"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="longitude">
+    <rdfs:domain rdf:resource="#GeographicLocation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdfs:comment xml:lang="en">The longiitude component of a GeographicLocation</rdfs:comment>
+    <rdfs:label xml:lang="en">longitude</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="latitude">
+    <rdfs:label xml:lang="en">latitude</rdfs:label>
+    <rdfs:domain rdf:resource="#GeographicLocation"/>
+    <rdfs:comment xml:lang="en">The latitude component of a GeographicLocation</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="altitude">
+    <rdfs:comment xml:lang="en">The altitude component of a GeographicLocation</rdfs:comment>
+    <rdfs:domain rdf:resource="#GeographicLocation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:label xml:lang="en">altitude</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="occupation">
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:label xml:lang="en">occupation</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">Specfically: The principal business of one's life;</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="description">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">description</rdfs:label>
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:comment xml:lang="en">A brief description of the salient aspects of a Human. This is not the way to enter dictionary-style definitions.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="name_en">
+    <rdfs:label xml:lang="en">English name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">The human language name of an Object in English. 
+Since Protege (3.0 build 141) doesn't seem to support loading and saving xml:lang attributes on properties, different subproperties are used for representing names in different languages.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Object"/>
+          <owl:Class rdf:about="#BeliefSystem"/>
+          <owl:Class rdf:about="#HumanAttribute"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:TransitiveProperty rdf:ID="subregion">
+    <rdfs:range rdf:resource="#GeographicArea"/>
+    <rdfs:label xml:lang="en">subregion</rdfs:label>
+    <rdfs:comment xml:lang="en">Inverse of subregionOf.</rdfs:comment>
+    <owl:inverseOf>
+      <owl:TransitiveProperty rdf:ID="subregionOf"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#GeographicArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="#subregionOf">
+    <rdfs:domain rdf:resource="#GeographicArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A smaller GeographicArea is a subregionOf a larger one (e.g. Jerusalem is a subregionOf Israel).</rdfs:comment>
+    <rdfs:label xml:lang="en">subregion of</rdfs:label>
+    <rdfs:range rdf:resource="#GeographicArea"/>
+    <owl:inverseOf rdf:resource="#subregion"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="siblingOf">
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="#relativeOf"/>
+    </rdfs:subPropertyOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="#siblingOf"/>
+    <rdfs:comment xml:lang="en">Similar to http://purl.org/vocab/relationship vocabulary, but with different domain and range.</rdfs:comment>
+    <rdfs:label xml:lang="en">sibling of</rdfs:label>
+    <rdfs:range rdf:resource="#Human"/>
+  </owl:TransitiveProperty>
+  <owl:SymmetricProperty rdf:ID="possiblySamePersonAs">
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="#possiblySamePersonAs"/>
+    <rdfs:label xml:lang="en">possibly same person as</rdfs:label>
+    <rdfs:comment xml:lang="en">This person may be the same as the other person, though there isn't enough evidence to definitively say so. Typically the individuals will have the same name, and some overlap of circumstances that makes it possible. </rdfs:comment>
+    <rdfs:range rdf:resource="#Human"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:ID="collaboratesWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:comment xml:lang="en">"A person who works toward a common goal with this person", similar to http://purl.org/vocab/relationship vocabulary, but with different domain and range. Those to whom the author of a New Testament Epistle send greetings are assumed to be collaborators, though this is perhaps broader than the general sense of the word. However, simple Christian fellowship or conversion do not constitute collaboration in this sense. </rdfs:comment>
+    <rdfs:label xml:lang="en">collaborates with</rdfs:label>
+    <rdfs:range rdf:resource="#Human"/>
+    <rdfs:subPropertyOf>
+      <owl:SymmetricProperty rdf:about="#knows"/>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf rdf:resource="#collaboratesWith"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="#knows">
+    <rdfs:range rdf:resource="#Human"/>
+    <owl:inverseOf rdf:resource="#knows"/>
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:label xml:lang="en">knows</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">"A person known by this person (indicating some level of reciprocated interaction between the parties)", similar to http://purl.org/vocab/relationship vocabulary, but with different domain and range. Therefore this is a symmetric relationship: if I know you, you also know me (or else we don't "know" each other in this sense). </rdfs:comment>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="#spouseOf">
+    <owl:inverseOf rdf:resource="#spouseOf"/>
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdfs:comment xml:lang="en">Similar to http://purl.org/vocab/relationship vocabulary, but with different domain and range. Multiple spouses are all included, whether sequential (Herodias) or simultaneous (the woman at the well). </rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">spouse of</rdfs:label>
+    <rdfs:range rdf:resource="#Human"/>
+  </owl:SymmetricProperty>
+  <owl:SymmetricProperty rdf:about="#relativeOf">
+    <rdfs:comment xml:lang="en">A person who is related by kinship to this person. No attempt is made to delineate precisely which kinship relations qualify: this is used when a description indicates two people are "related". parent/child/siblingOf are subproperties of this, properly speaking. </rdfs:comment>
+    <rdfs:range rdf:resource="#Human"/>
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="#relativeOf"/>
+    <rdfs:label xml:lang="en">relative of</rdfs:label>
+  </owl:SymmetricProperty>
+  <owl:FunctionalProperty rdf:ID="hasHeight">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#CognitiveAgent"/>
+          <owl:Class rdf:about="#PhysicalObject"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The vertical dimension of extension; distance from the base of something to the top.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasIdentityCard">
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="#isIdentityCardOf"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#IdentityCard"/>
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The identity card of a citizen.</rdfs:comment>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasPlaceOfPublication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Card"/>
+    <rdfs:range rdf:resource="#Region"/>
+    <rdfs:comment xml:lang="en">The place of a publication (making information generally known) of a thing.</rdfs:comment>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="location">
+    <rdfs:comment xml:lang="en">The location property relates a GeographicArea to a GeographicLocation. Each GeographicArea is assumed to have only one location, and no GeographicAreas share a location. </rdfs:comment>
+    <rdfs:label xml:lang="en">location</rdfs:label>
+    <rdfs:range rdf:resource="#GeographicLocation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#GeographicArea"/>
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:ID="locationOf"/>
+    </owl:inverseOf>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasWeight">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#CognitiveAgent"/>
+          <owl:Class rdf:about="#PhysicalObject"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The vertical force exerted by a mass as a result of gravity.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#nativePlace">
+    <rdfs:comment xml:lang="en">Birthplace, or place in which a person grows up. Unlike residentOf, only one possible value. residentPlace is to be preferred unless the birthplace relationship is clearly identified.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="#visitedPlace"/>
+    <rdfs:label xml:lang="en">native place</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Human"/>
+          <owl:Class rdf:about="#GroupOfPeople"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#GeographicArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="#nativePlaceOf"/>
+    </owl:inverseOf>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasDateOfIssue">
+    <rdfs:domain rdf:resource="#IdentityCard"/>
+    <rdfs:comment xml:lang="en">The date where an official document (such as a warrant) was brought out, as written in a European identity card.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasCardNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The number of a European identity card.</rdfs:comment>
+    <rdfs:domain rdf:resource="#IdentityCard"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasDateOfBirth">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#CognitiveAgent"/>
+    <rdfs:comment xml:lang="en">The date on which a creature was born (in reality and as written in a European Identity card).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasKnownNames">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">All the given names of a creature.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasRhesusBloodGroup">
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#RhesusBloodGroupSystem"/>
+    <rdfs:comment xml:lang="en">The rhesus blood group  which a human belongs to.</rdfs:comment>
+  </owl:FunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="#isIdentityCardOf">
+    <rdfs:domain rdf:resource="#IdentityCard"/>
+    <rdfs:comment xml:lang="en">The reverse of the hasIdentityCard property.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#Human"/>
+    <owl:inverseOf rdf:resource="#hasIdentityCard"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="#nativePlaceOf">
+    <rdfs:comment xml:lang="en">The reverse of the nativePlace property.</rdfs:comment>
+    <rdfs:domain rdf:resource="#GeographicArea"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="#visitedPlaceOf"/>
+    <owl:inverseOf rdf:resource="#nativePlace"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Human"/>
+          <owl:Class rdf:about="#GroupOfPeople"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="#locationOf">
+    <rdfs:comment xml:lang="en">The reverse of the location property.</rdfs:comment>
+    <owl:inverseOf rdf:resource="#location"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#GeographicLocation"/>
+    <rdfs:range rdf:resource="#GeographicArea"/>
+  </owl:InverseFunctionalProperty>
+  <EthnicityAttribute rdf:ID="irish">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Ireland.</rdfs:comment>
+  </EthnicityAttribute>
+  <EthnicGroup rdf:ID="germans">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Germany.</rdfs:comment>
+  </EthnicGroup>
+  <ReligiousBeliefSystem rdf:ID="buddhism">
+    <religiousBeliefOf>
+      <BeliefGroup rdf:ID="buddhists">
+        <religiousBelief rdf:resource="#buddhism"/>
+        <rdfs:comment xml:lang="en">People who follow the teachings of Buddha.</rdfs:comment>
+      </BeliefGroup>
+    </religiousBeliefOf>
+    <rdfs:comment xml:lang="en">The teaching of Buddha that life is permeated with suffering caused by desire, that suffering ceases when desire ceases, and that enlightenment obtained through right conduct and wisdom and meditation releases one from desire and suffering and rebirth.</rdfs:comment>
+  </ReligiousBeliefSystem>
+  <EthnicityAttribute rdf:ID="english">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of England.</rdfs:comment>
+  </EthnicityAttribute>
+  <CitizenshipAttribute rdf:ID="italianCitizenShip">
+    <rdfs:comment xml:lang="en">Belonging to the citizenry of Italy.</rdfs:comment>
+  </CitizenshipAttribute>
+  <EthnicityAttribute rdf:ID="danish">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Denmark.</rdfs:comment>
+  </EthnicityAttribute>
+  <ReligiousBelief rdf:ID="sikh">
+    <rdfs:comment xml:lang="en">An adherent of Sikhism.</rdfs:comment>
+  </ReligiousBelief>
+  <City rdf:ID="thessaloniki">
+    <subregionOf>
+      <StateOrProvince rdf:ID="greece">
+        <subregion rdf:resource="#thessaloniki"/>
+        <rdfs:comment xml:lang="en">A republic in southeastern Europe on the southern part of the Balkan peninsula; known for grapes and olives and olive oil.</rdfs:comment>
+      </StateOrProvince>
+    </subregionOf>
+    <nativePlaceOf>
+      <Man rdf:ID="kasamath">
+        <hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >80</hasWeight>
+        <memberOf>
+          <EthnicGroup rdf:ID="greeks">
+            <rdfs:comment xml:lang="en">Belonging to the ethnic group of Greece.</rdfs:comment>
+            <religiousBelief>
+              <Christianity rdf:ID="orthodoxChristianity">
+                <religiousBeliefOf>
+                  <Christians rdf:ID="orthodoxChristians">
+                    <religiousBelief rdf:resource="#orthodoxChristianity"/>
+                    <rdfs:comment xml:lang="en">Of or relating to or characteristic of the Eastern Orthodox Church.</rdfs:comment>
+                    <member rdf:resource="#kasamath"/>
+                  </Christians>
+                </religiousBeliefOf>
+                <religiousBeliefOf rdf:resource="#kasamath"/>
+                <religiousBeliefOf rdf:resource="#greeks"/>
+                <rdfs:comment xml:lang="en">The Eastern Christian churches of Byzantine tradition, adhering to the teachings of the first seven Ecumenical Councils; also called the Eastern Orthodox Church.</rdfs:comment>
+              </Christianity>
+            </religiousBelief>
+            <member rdf:resource="#kasamath"/>
+          </EthnicGroup>
+        </memberOf>
+        <residentPlace rdf:resource="#thessaloniki"/>
+        <rdfs:comment xml:lang="en">An example of a European citizen.</rdfs:comment>
+        <hasCulture>
+          <Art rdf:ID="music">
+            <rdfs:comment xml:lang="en">An artistic form of auditory communication incorporating instrumental or vocal tones in a structured and continuous manner.</rdfs:comment>
+          </Art>
+        </hasCulture>
+        <description xml:lang="en">Athanasios Kasampalis is a greek student. It studies information technology in Alexander Technological Educational Institute of Thessaloniki. He is the creator of this ontology.</description>
+        <hasCulture>
+          <Art rdf:ID="cinema">
+            <rdfs:comment xml:lang="en">A theater where films are shown.</rdfs:comment>
+          </Art>
+        </hasCulture>
+        <memberOf rdf:resource="#orthodoxChristians"/>
+        <ethnicity>
+          <EthnicityAttribute rdf:ID="greek">
+            <ethnicityOf rdf:resource="#kasamath"/>
+            <rdfs:comment xml:lang="en">Belonging to the ethnic group of Greece.</rdfs:comment>
+          </EthnicityAttribute>
+        </ethnicity>
+        <residentPlace>
+          <Region rdf:ID="europeanUnion">
+            <rdfs:comment xml:lang="en">An international organization of European countries formed after World War II to reduce trade barriers and increase cooperation among its members.</rdfs:comment>
+            <residentPlaceOf rdf:resource="#kasamath"/>
+          </Region>
+        </residentPlace>
+        <hasFavoriteSport>
+          <Tennis rdf:ID="tableTennis">
+            <rdfs:comment xml:lang="en">Table tennis (also known colloquially as ping pong) is a sport where two or four players hit a ball back and forth to each other with paddles. The game takes place on a table divided by a net.</rdfs:comment>
+          </Tennis>
+        </hasFavoriteSport>
+        <nativePlace rdf:resource="#thessaloniki"/>
+        <speaksLanguage>
+          <NaturalLanguage rdf:ID="greekLanguage">
+            <rdfs:comment xml:lang="en">The Hellenic branch of the Indo-European family of languages.</rdfs:comment>
+          </NaturalLanguage>
+        </speaksLanguage>
+        <hasFavoriteSport>
+          <TeamSport rdf:ID="soccer">
+            <rdfs:comment xml:lang="en">A football game in which two teams of 11 players try to kick or head a ball into the opponents' goal.</rdfs:comment>
+          </TeamSport>
+        </hasFavoriteSport>
+        <religiousBelief rdf:resource="#orthodoxChristianity"/>
+        <hasIdentityCard>
+          <IdentityCard rdf:ID="kasamathIdentityCard">
+            <rdfs:comment xml:lang="en">An identity card of a European Citizen.</rdfs:comment>
+            <isIdentityCardOf rdf:resource="#kasamath"/>
+            <hasPlaceOfPublication rdf:resource="#thessaloniki"/>
+            <hasCardNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >T823033</hasCardNumber>
+            <hasDateOfIssue rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+            >2000-12-08</hasDateOfIssue>
+          </IdentityCard>
+        </hasIdentityCard>
+        <occupation xml:lang="en">student</occupation>
+        <hasCulture>
+          <PerformingArt rdf:ID="dance">
+            <rdfs:comment xml:lang="en">Taking a series of rhythmical steps (and movements) in time to music.</rdfs:comment>
+          </PerformingArt>
+        </hasCulture>
+        <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >181</hasHeight>
+        <hasRhesusBloodGroup>
+          <RhesusBloodGroupSystem rdf:ID="oRhesusPositive">
+            <rdfs:comment xml:lang="en">O Rh+. If you belong to the blood group 0 (null), you have neither A or B antigens on the surface of your red blood cells but you have both A and B antibodies in your blood plasma.</rdfs:comment>
+          </RhesusBloodGroupSystem>
+        </hasRhesusBloodGroup>
+        <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1984-12-25</hasDateOfBirth>
+      </Man>
+    </nativePlaceOf>
+    <residentPlaceOf rdf:resource="#kasamath"/>
+    <location>
+      <GeographicLocation rdf:ID="thessalonikiGeoData">
+        <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >0</altitude>
+        <locationOf rdf:resource="#thessaloniki"/>
+        <latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >40.6</latitude>
+        <longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#double"
+        >22.3</longitude>
+        <rdfs:comment xml:lang="en">The geographic data of Thessaloniki.</rdfs:comment>
+      </GeographicLocation>
+    </location>
+    <rdfs:comment xml:lang="en">Thessaloniki, (Greek: Θεσσαλονίκη), is Greece's second-largest city and the capital of the Greek region of Macedonia. In writing, it sometimes abbreviated "Thes/niki". Thessaloniki is commonly called the 'symprotevousa' (lit. co-capital) of Greece due to both its long history and its strategic geographic and economic importance. More formally it is known as the "Capital of Cultural Affairs".</rdfs:comment>
+  </City>
+  <EthnicGroup rdf:ID="lithuanians">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Lithuania.</rdfs:comment>
+  </EthnicGroup>
+  <Christianity rdf:ID="easternRiteCatholicism">
+    <religiousBeliefOf>
+      <Christians rdf:ID="easternRiteCatholics">
+        <rdfs:comment xml:lang="en">Members of an Eastern Rite Catholic church.</rdfs:comment>
+        <religiousBelief rdf:resource="#easternRiteCatholicism"/>
+      </Christians>
+    </religiousBeliefOf>
+    <rdfs:comment xml:lang="en">The Eastern Catholic Churches are autonomous particular Churches in full communion with the Pope of Rome.</rdfs:comment>
+  </Christianity>
+  <EthnicityAttribute rdf:ID="latvian">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Latvia.</rdfs:comment>
+  </EthnicityAttribute>
+  <BeliefGroup rdf:ID="hindus">
+    <rdfs:comment xml:lang="en">Since Hinduism is a way of life more than a religion it would be difficult to precisely describe who is a Hindu. There could be many ways in which one could describe Hindus.</rdfs:comment>
+    <religiousBelief>
+      <ReligiousBeliefSystem rdf:ID="hinduism">
+        <rdfs:comment xml:lang="en">The predominant religion of India; characterized by a caste system and belief in reincarnation.</rdfs:comment>
+        <religiousBeliefOf rdf:resource="#hindus"/>
+      </ReligiousBeliefSystem>
+    </religiousBelief>
+  </BeliefGroup>
+  <RhesusBloodGroupSystem rdf:ID="abRhesusNegative">
+    <rdfs:comment xml:lang="en">AB Rh-. If someone belongs to the blood group AB, he has both A and B antigens on the surface of his red blood cells and no A or B antibodies at all in his blood plasma.</rdfs:comment>
+  </RhesusBloodGroupSystem>
+  <CitizenshipAttribute rdf:ID="portugueseCitizenShip">
+    <rdfs:comment xml:lang="en">Belonging to the citizenry of Portugal.</rdfs:comment>
+  </CitizenshipAttribute>
+  <CitizenshipAttribute rdf:ID="frenchCitizenShip">
+    <rdfs:comment xml:lang="en">Belonging to the citizenry of France.</rdfs:comment>
+  </CitizenshipAttribute>
+  <ReligiousBeliefSystem rdf:ID="sikhism">
+    <rdfs:comment xml:lang="en">The doctrines of a monotheistic religion founded in northern India in the 16th century by Guru Nanak and combining elements of Hinduism and Islam.</rdfs:comment>
+    <religiousBeliefOf>
+      <BeliefGroup rdf:ID="sikhs">
+        <religiousBelief rdf:resource="#sikhism"/>
+        <rdfs:comment xml:lang="en">Adherents of Sikhism.</rdfs:comment>
+      </BeliefGroup>
+    </religiousBeliefOf>
+  </ReligiousBeliefSystem>
+  <StateOrProvince rdf:ID="unitedKingdom">
+    <rdfs:comment xml:lang="en">A monarchy in northwestern Europe occupying most of the British Isles; divided into England and Scotland and Wales and Northern Ireland.</rdfs:comment>
+  </StateOrProvince>
+  <RhesusBloodGroupSystem rdf:ID="bRhesusPositive">
+    <rdfs:comment xml:lang="en">B Rh+. If someone belongs to the blood group B, he has B antigens on the surface of his red blood cells and A antibodies in his blood plasma.</rdfs:comment>
+  </RhesusBloodGroupSystem>
+  <Christian rdf:ID="romanCatholic">
+    <rdfs:comment xml:lang="en">A member of the Roman Catholic Church.</rdfs:comment>
+  </Christian>
+  <BeliefGroup rdf:ID="jews">
+    <religiousBelief>
+      <ReligiousBeliefSystem rdf:ID="judaism">
+        <religiousBeliefOf rdf:resource="#jews"/>
+        <rdfs:comment xml:lang="en">The monotheistic religion of the Jews having its spiritual and ethical principles embodied chiefly in the Torah and in the Talmud.</rdfs:comment>
+      </ReligiousBeliefSystem>
+    </religiousBelief>
+    <rdfs:comment xml:lang="en">Persons belonging to the worldwide group claiming descent from Jacob (or converted to it) and connected by cultural or religious ties.</rdfs:comment>
+  </BeliefGroup>
+  <EthnicityAttribute rdf:ID="finnish">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Finland.</rdfs:comment>
+  </EthnicityAttribute>
+  <EthnicGroup rdf:ID="portugueseG">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Portugal.</rdfs:comment>
+  </EthnicGroup>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <CitizenshipAttribute rdf:ID="austrianCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Austria.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="belgianCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Belgium.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="cyprianCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Cyprus.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="czechRepublicCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of czechRepublic.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="danishCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Denmark.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="estonianCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Estonia.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="finnishCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Finland.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:about="#frenchCitizenShip"/>
+      <CitizenshipAttribute rdf:ID="germanCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Germany.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="hungarianCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Hungary.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="irishCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Ireland.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:about="#italianCitizenShip"/>
+      <CitizenshipAttribute rdf:ID="latvianCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Latvia.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="lithuanianCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Lithuania.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="luxembourgianCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Luxembourg.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="malteseCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Malta.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:about="#portugueseCitizenShip"/>
+      <CitizenshipAttribute rdf:ID="slovakianCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Slovakia.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="slovenianCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Slovenia.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="spanishCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Spain.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="swedishCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of Sweden.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="dutchCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of the Netherlands.</rdfs:comment>
+      </CitizenshipAttribute>
+      <CitizenshipAttribute rdf:ID="englishCitizenShip">
+        <rdfs:comment xml:lang="en">Belonging to the citizenry of England.</rdfs:comment>
+      </CitizenshipAttribute>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <NaturalLanguage rdf:ID="englishLanguage">
+    <rdfs:comment xml:lang="en">An Indo-European language belonging to the West Germanic branch; the official language of Britain and the United States and most of the commonwealth countries.</rdfs:comment>
+  </NaturalLanguage>
+  <StateOrProvince rdf:ID="hungary">
+    <rdfs:comment xml:lang="en">A republic in central Europe.</rdfs:comment>
+  </StateOrProvince>
+  <VisualArt rdf:ID="architecture">
+    <rdfs:comment xml:lang="en">The profession of designing buildings and environments with consideration for their esthetic effect.</rdfs:comment>
+  </VisualArt>
+  <NaturalLanguage rdf:ID="czechLanguage">
+    <rdfs:comment xml:lang="en">The Slavic language of Czechs.</rdfs:comment>
+  </NaturalLanguage>
+  <TeamSport rdf:ID="handball">
+    <rdfs:comment xml:lang="en">A game played in a walled court or against a single wall by two or four players who strike a rubber ball with their hands.</rdfs:comment>
+  </TeamSport>
+  <BeliefGroup rdf:ID="voduns">
+    <religiousBelief>
+      <ReligiousBeliefSystem rdf:ID="voodoo">
+        <rdfs:comment xml:lang="en">A religious cult practiced chiefly in Caribbean countries (especially Haiti); involves witchcraft and animistic deities.</rdfs:comment>
+        <religiousBeliefOf rdf:resource="#voduns"/>
+      </ReligiousBeliefSystem>
+    </religiousBelief>
+    <rdfs:comment xml:lang="en">Voodoo practicers.</rdfs:comment>
+  </BeliefGroup>
+  <Art rdf:ID="broadcasting">
+    <rdfs:comment xml:lang="en">A broadcast is a radio or television show. Broadcasting is the activity of sending out a programme on television or radio.</rdfs:comment>
+  </Art>
+  <EthnicityAttribute rdf:ID="french">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of France.</rdfs:comment>
+  </EthnicityAttribute>
+  <NaturalLanguage rdf:ID="hungarianLanguage">
+    <rdfs:comment xml:lang="en">The official language of Hungary (also spoken in Rumania); belongs to the Ugric family of languages.</rdfs:comment>
+  </NaturalLanguage>
+  <EthnicityAttribute rdf:ID="german">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Germany.</rdfs:comment>
+  </EthnicityAttribute>
+  <MartialArt rdf:ID="aikido">
+    <rdfs:comment xml:lang="en">A Japanese martial art employing principles similar to judo.</rdfs:comment>
+  </MartialArt>
+  <ReligiousBelief rdf:ID="jew">
+    <rdfs:comment xml:lang="en">A person belonging to the worldwide group claiming descent from Jacob (or converted to it) and connected by cultural or religious ties.</rdfs:comment>
+  </ReligiousBelief>
+  <CombatSport rdf:ID="wrestling">
+    <rdfs:comment xml:lang="en">The sport of hand-to-hand struggle between unarmed contestants who try to throw each other down.</rdfs:comment>
+  </CombatSport>
+  <SnowBoardSport rdf:ID="ski">
+    <rdfs:comment xml:lang="en">Skis are narrow wood or metal or plastic runners used in pairs for gliding over snow is. Skiing means moving along on skis.</rdfs:comment>
+  </SnowBoardSport>
+  <EthnicityAttribute rdf:ID="polish">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Poland.</rdfs:comment>
+  </EthnicityAttribute>
+  <NaturalLanguage rdf:ID="latvianLanguage">
+    <rdfs:comment xml:lang="en">The official language of Latvia; belongs to the Baltic branch of Indo-European.</rdfs:comment>
+  </NaturalLanguage>
+  <NaturalLanguage rdf:ID="danishLanguage">
+    <rdfs:comment xml:lang="en">A Scandinavian language that is the official language of Denmark.</rdfs:comment>
+  </NaturalLanguage>
+  <EthnicityAttribute rdf:ID="slovenian">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Slovenia.</rdfs:comment>
+  </EthnicityAttribute>
+  <StateOrProvince rdf:ID="finland">
+    <rdfs:comment xml:lang="en">Republic in northern Europe; achieved independence from Russia in 1917.</rdfs:comment>
+  </StateOrProvince>
+  <EthnicityAttribute rdf:ID="czech">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Czech Republic.</rdfs:comment>
+  </EthnicityAttribute>
+  <StateOrProvince rdf:ID="slovenia">
+    <rdfs:comment xml:lang="en">A mountainous republic in central Europe; formerly part of the Habsburg monarchy and Yugoslavia; achieved independence in 1991.</rdfs:comment>
+  </StateOrProvince>
+  <NaturalLanguage rdf:ID="italianLanguage">
+    <rdfs:comment xml:lang="en">The Romance language spoken in Italy.</rdfs:comment>
+  </NaturalLanguage>
+  <StateOrProvince rdf:ID="belgium">
+    <rdfs:comment xml:lang="en">A monarchy in northwestern Europe; headquarters for the European Union and for the North Atlantic Treaty Organization.</rdfs:comment>
+  </StateOrProvince>
+  <EthnicityAttribute rdf:ID="hungarian">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Hungary.</rdfs:comment>
+  </EthnicityAttribute>
+  <ReligiousBelief rdf:ID="vodun">
+    <rdfs:comment xml:lang="en">A voodoo practicer.</rdfs:comment>
+  </ReligiousBelief>
+  <StateOrProvince rdf:ID="lithuania">
+    <rdfs:comment xml:lang="en">A republic in northeastern Europe on the Baltic Sea.</rdfs:comment>
+  </StateOrProvince>
+  <EthnicityAttribute rdf:ID="belgian">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Belgium.</rdfs:comment>
+  </EthnicityAttribute>
+  <EthnicGroup rdf:ID="frenchG">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of France.</rdfs:comment>
+  </EthnicGroup>
+  <EthnicityAttribute rdf:ID="spanish">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Spain.</rdfs:comment>
+  </EthnicityAttribute>
+  <BeliefGroup rdf:ID="rastafarians">
+    <rdfs:comment xml:lang="en">Followers of Rastafarianism.</rdfs:comment>
+    <religiousBelief>
+      <ReligiousBeliefSystem rdf:ID="rastafari">
+        <rdfs:comment xml:lang="en">A Black youth subculture and religious movement that arose in the ghettos of Kingston, Jamaica, in the 1950s; Rastafarians regard Ras Tafari as divine; males grow hair in long dreadlocks and wear woolen caps; use marijuana and listen to reggae music.</rdfs:comment>
+        <religiousBeliefOf rdf:resource="#rastafarians"/>
+      </ReligiousBeliefSystem>
+    </religiousBelief>
+  </BeliefGroup>
+  <EthnicGroup rdf:ID="austrians">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Austria.</rdfs:comment>
+  </EthnicGroup>
+  <NaturalLanguage rdf:ID="lithuanianLanguage">
+    <rdfs:comment xml:lang="en">The official language of Lithuania; belongs to the Baltic branch of Indo-European.</rdfs:comment>
+  </NaturalLanguage>
+  <EthnicityAttribute rdf:ID="austrian">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Austria.</rdfs:comment>
+  </EthnicityAttribute>
+  <ReligiousBelief rdf:ID="hindu">
+    <rdfs:comment xml:lang="en">Since Hinduism is a way of life more than a religion it would be difficult to precisely describe who is a Hindu. There could be many ways in which one could describe a Hindu.</rdfs:comment>
+  </ReligiousBelief>
+  <Christians rdf:ID="protestants">
+    <rdfs:comment xml:lang="en">Of or relating to Protestants or Protestantism.</rdfs:comment>
+    <religiousBelief>
+      <Christianity rdf:ID="protestantism">
+        <religiousBeliefOf rdf:resource="#protestants"/>
+        <rdfs:comment xml:lang="en">While no particular belief or practice can be said to define this branch of Christianity (indeed, a commonly given definition is merely "any Christian denomination which is not Roman Catholic or Orthodox Christian"), those denominations considered to be well within the realm of Protestantism all have firm roots in the Protestant Reformation initiated by Martin Luther's 95 Theses during the sixteenth century.</rdfs:comment>
+      </Christianity>
+    </religiousBelief>
+  </Christians>
+  <StateOrProvince rdf:ID="germany">
+    <rdfs:comment xml:lang="en">A republic in central Europe; split into East German and West Germany after World War II and reunited in 1990.</rdfs:comment>
+  </StateOrProvince>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <RhesusBloodGroupSystem rdf:about="#abRhesusNegative"/>
+      <RhesusBloodGroupSystem rdf:ID="abRhesusPositive">
+        <rdfs:comment xml:lang="en">AB Rh+. If someone belongs to the blood group AB, he has both A and B antigens on the surface of his red blood cells and no A or B antibodies at all in his blood plasma.</rdfs:comment>
+      </RhesusBloodGroupSystem>
+      <RhesusBloodGroupSystem rdf:ID="aRhesusNegative">
+        <rdfs:comment xml:lang="en">A Rh-. If someone belongs to the blood group A, he has A antigens on the surface of his red blood cells and B antibodies in his blood plasma.</rdfs:comment>
+      </RhesusBloodGroupSystem>
+      <RhesusBloodGroupSystem rdf:ID="aRhesusPositive">
+        <rdfs:comment xml:lang="en">A Rh+. If someone belongs to the blood group A, he has A antigens on the surface of his red blood cells and B antibodies in his blood plasma.</rdfs:comment>
+      </RhesusBloodGroupSystem>
+      <RhesusBloodGroupSystem rdf:ID="bRhesusNegative">
+        <rdfs:comment xml:lang="en">B Rh-. If someone belongs to the blood group B, he has B antigens on the surface of his red blood cells and A antibodies in his blood plasma.</rdfs:comment>
+      </RhesusBloodGroupSystem>
+      <RhesusBloodGroupSystem rdf:about="#bRhesusPositive"/>
+      <RhesusBloodGroupSystem rdf:ID="oRhesusNegative">
+        <rdfs:comment xml:lang="en">O Rh-. If you belong to the blood group 0 (null), you have neither A or B antigens on the surface of your red blood cells but you have both A and B antibodies in your blood plasma.</rdfs:comment>
+      </RhesusBloodGroupSystem>
+      <RhesusBloodGroupSystem rdf:about="#oRhesusPositive"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <Christian rdf:ID="orthodoxChristian">
+    <rdfs:comment xml:lang="en">Of or relating to or characteristic of the Eastern Orthodox Church.</rdfs:comment>
+  </Christian>
+  <PerformingArt rdf:ID="theatre">
+    <rdfs:comment xml:lang="en">The art of writing and producing plays.</rdfs:comment>
+  </PerformingArt>
+  <OnTheWater rdf:ID="sailing">
+    <rdfs:comment xml:lang="en">Travel in a boat propelled by wind.</rdfs:comment>
+  </OnTheWater>
+  <NaturalLanguage rdf:ID="germanLanguage">
+    <rdfs:comment xml:lang="en">The standard German language; developed historically from West Germanic.</rdfs:comment>
+  </NaturalLanguage>
+  <EthnicityAttribute rdf:ID="lithuanian">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Lithuania.</rdfs:comment>
+  </EthnicityAttribute>
+  <EthnicGroup rdf:ID="slovenians">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Slovenia.</rdfs:comment>
+  </EthnicGroup>
+  <StateOrProvince rdf:ID="czechRepublic">
+    <rdfs:comment xml:lang="en">A landlocked republic in central Europe; separated from Slovakia in 1993.</rdfs:comment>
+  </StateOrProvince>
+  <EthnicGroup rdf:ID="italians">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Italy.</rdfs:comment>
+  </EthnicGroup>
+  <Christian rdf:ID="protestant">
+    <rdfs:comment xml:lang="en">Of or relating to Protestants or Protestantism.</rdfs:comment>
+  </Christian>
+  <TeamSport rdf:ID="squash">
+    <rdfs:comment xml:lang="en">A game played in an enclosed court by two or four players who strike the ball with long-handled rackets.</rdfs:comment>
+  </TeamSport>
+  <ReligiousBelief rdf:ID="muslim">
+    <rdfs:comment xml:lang="en">A believer in or follower of Islam.</rdfs:comment>
+  </ReligiousBelief>
+  <EthnicGroup rdf:ID="englishG">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of England.</rdfs:comment>
+  </EthnicGroup>
+  <StateOrProvince rdf:ID="poland">
+    <rdfs:comment xml:lang="en">A republic in central Europe; the invasion of Poland by Germany in 1939 started World War II.</rdfs:comment>
+  </StateOrProvince>
+  <NaturalLanguage rdf:ID="spanishLanguage">
+    <rdfs:comment xml:lang="en">The Romance language spoken in most of Spain and the countries colonized by Spain.</rdfs:comment>
+  </NaturalLanguage>
+  <NaturalLanguage rdf:ID="frenchLanguage">
+    <rdfs:comment xml:lang="en">The Romance language spoken in France and in countries colonized by France.</rdfs:comment>
+  </NaturalLanguage>
+  <ReligiousBeliefSystem rdf:ID="islam">
+    <religiousBeliefOf>
+      <BeliefGroup rdf:ID="muslims">
+        <religiousBelief rdf:resource="#islam"/>
+        <rdfs:comment xml:lang="en">Believers in or followers of Islam.</rdfs:comment>
+      </BeliefGroup>
+    </religiousBeliefOf>
+    <rdfs:comment xml:lang="en">The monotheistic religious system of Muslims founded in Arabia in the 7th century and based on the teachings of Muhammad as laid down in the Koran.</rdfs:comment>
+  </ReligiousBeliefSystem>
+  <EthnicGroup rdf:ID="dutchG">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of the Netherlands.</rdfs:comment>
+  </EthnicGroup>
+  <EthnicityAttribute rdf:ID="swedish">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Sweden.</rdfs:comment>
+  </EthnicityAttribute>
+  <AdventureSport rdf:ID="climbing">
+    <rdfs:comment xml:lang="en">An event that involves rising to a higher point (as in altitude or temperature or intensity etc.).</rdfs:comment>
+  </AdventureSport>
+  <StateOrProvince rdf:ID="ireland">
+    <rdfs:comment xml:lang="en">A republic consisting of 26 of 32 counties comprising the island of Ireland; achieved independence from the United Kingdom in 1921.</rdfs:comment>
+  </StateOrProvince>
+  <StateOrProvince rdf:ID="spain">
+    <rdfs:comment xml:lang="en">A parliamentary monarchy in southwestern Europe on the Iberian Peninsula; a former colonial power.</rdfs:comment>
+  </StateOrProvince>
+  <TargetSport rdf:ID="shooting">
+    <rdfs:comment xml:lang="en">To try to score points for yourself or your team, in sports involving a ball, by kicking, hitting or throwing the ball towards the goal.</rdfs:comment>
+  </TargetSport>
+  <Christian rdf:ID="easternRiteCatholic">
+    <rdfs:comment xml:lang="en">A member of an Eastern Rite Catholic church.</rdfs:comment>
+  </Christian>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <ReligiousBeliefSystem rdf:about="#buddhism"/>
+      <ReligiousBeliefSystem rdf:about="#hinduism"/>
+      <ReligiousBeliefSystem rdf:about="#islam"/>
+      <ReligiousBeliefSystem rdf:about="#judaism"/>
+      <ReligiousBeliefSystem rdf:about="#rastafari"/>
+      <ReligiousBeliefSystem rdf:about="#sikhism"/>
+      <ReligiousBeliefSystem rdf:about="#voodoo"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <EthnicGroup rdf:ID="belgians">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Belgium.</rdfs:comment>
+  </EthnicGroup>
+  <CitizenshipAttribute rdf:ID="polishCitizenShip">
+    <rdfs:comment xml:lang="en">Belonging to the citizenry of Poland.</rdfs:comment>
+  </CitizenshipAttribute>
+  <RacketSport rdf:ID="badminton">
+    <rdfs:comment xml:lang="en">A game played on a court with light long-handled rackets used to volley a shuttlecock over a net.</rdfs:comment>
+  </RacketSport>
+  <StateOrProvince rdf:ID="austria">
+    <rdfs:comment xml:lang="en">A mountainous republic in central Europe; under the Habsburgs (1278-1918) Austria maintained control of the Holy Roman Empire and was a leader in European politics until the 19th century.</rdfs:comment>
+  </StateOrProvince>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <StateOrProvince rdf:about="#greece"/>
+      <StateOrProvince rdf:about="#austria"/>
+      <StateOrProvince rdf:about="#belgium"/>
+      <StateOrProvince rdf:ID="cyprus">
+        <rdfs:comment xml:lang="en">A country on the island of Cyprus; 80% of the people are of Greek origin and 20% or Turkish origin.</rdfs:comment>
+      </StateOrProvince>
+      <StateOrProvince rdf:about="#czechRepublic"/>
+      <StateOrProvince rdf:ID="denmark">
+        <rdfs:comment xml:lang="en">A constitutional monarchy in northern Europe; consists of the mainland of Jutland and many islands between the North Sea and the Baltic Sea.</rdfs:comment>
+      </StateOrProvince>
+      <StateOrProvince rdf:ID="estonia">
+        <rdfs:comment xml:lang="en">A republic in northeastern Europe on the Baltic Sea.</rdfs:comment>
+      </StateOrProvince>
+      <StateOrProvince rdf:about="#finland"/>
+      <StateOrProvince rdf:ID="france">
+        <rdfs:comment xml:lang="en">A republic in western Europe; the largest country wholly in Europe.</rdfs:comment>
+      </StateOrProvince>
+      <StateOrProvince rdf:about="#germany"/>
+      <StateOrProvince rdf:about="#hungary"/>
+      <StateOrProvince rdf:about="#ireland"/>
+      <StateOrProvince rdf:ID="italy">
+        <rdfs:comment xml:lang="en">A republic in southern Europe on the Italian Peninsula; was the core of the Roman Republic and the Roman Empire between the 4th century BC and the 5th century AD.</rdfs:comment>
+      </StateOrProvince>
+      <StateOrProvince rdf:ID="latvia">
+        <rdfs:comment xml:lang="en">A republic in northeastern Europe on the eastern coast of the Baltic Sea.</rdfs:comment>
+      </StateOrProvince>
+      <StateOrProvince rdf:about="#lithuania"/>
+      <StateOrProvince rdf:ID="luxembourg">
+        <rdfs:comment xml:lang="en">A grand duchy (a constitutional monarchy) landlocked in northwestern Europe between France and Belgium and Germany; an international financial center.</rdfs:comment>
+      </StateOrProvince>
+      <StateOrProvince rdf:ID="malta">
+        <rdfs:comment xml:lang="en">A republic on the island of Malta in the Mediterranean; achieved independence from the United Kingdom in 1964.</rdfs:comment>
+      </StateOrProvince>
+      <StateOrProvince rdf:about="#poland"/>
+      <StateOrProvince rdf:ID="portugal">
+        <rdfs:comment xml:lang="en">A republic in southwestern Europe on the Iberian Peninsula; Portuguese explorers and colonists in the 15th and 16th centuries created a vast overseas empire (including Brazil).</rdfs:comment>
+      </StateOrProvince>
+      <StateOrProvince rdf:ID="slovakia">
+        <rdfs:comment xml:lang="en">A landlocked republic in central Europe; separated from the Czech Republic in 1993.</rdfs:comment>
+      </StateOrProvince>
+      <StateOrProvince rdf:about="#slovenia"/>
+      <StateOrProvince rdf:about="#spain"/>
+      <StateOrProvince rdf:ID="sweden">
+        <rdfs:comment xml:lang="en">A Scandinavian kingdom in the eastern part of the Scandinavian Peninsula.</rdfs:comment>
+      </StateOrProvince>
+      <StateOrProvince rdf:ID="theNetherlands">
+        <rdfs:comment xml:lang="en">A constitutional monarchy in western Europe on the North Sea; half the country lies below sea level.</rdfs:comment>
+      </StateOrProvince>
+      <StateOrProvince rdf:about="#unitedKingdom"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <EthnicGroup rdf:ID="spanishG">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Spain.</rdfs:comment>
+  </EthnicGroup>
+  <EthnicGroup rdf:ID="irishG">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Ireland.</rdfs:comment>
+  </EthnicGroup>
+  <EthnicityAttribute rdf:ID="maltese">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Malta.</rdfs:comment>
+  </EthnicityAttribute>
+  <EthnicityAttribute rdf:ID="luxembourgian">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Luxembourg.</rdfs:comment>
+  </EthnicityAttribute>
+  <EthnicGroup rdf:ID="slovaks">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Slovakia.</rdfs:comment>
+  </EthnicGroup>
+  <ReligiousBelief rdf:ID="buddhist">
+    <rdfs:comment xml:lang="en">One who follows the teachings of Buddha.</rdfs:comment>
+  </ReligiousBelief>
+  <CitizenshipAttribute rdf:ID="greekCitizenShip">
+    <rdfs:comment xml:lang="en">Belonging to the citizenry of Grece.</rdfs:comment>
+  </CitizenshipAttribute>
+  <EthnicGroup rdf:ID="danishG">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Denmark.</rdfs:comment>
+  </EthnicGroup>
+  <OnTheWater rdf:ID="canoeing">
+    <rdfs:comment xml:lang="en">Canoe is a small and light boat; pointed at both ends; propelled with a paddle. Canoeing means to travel by canoe.</rdfs:comment>
+  </OnTheWater>
+  <HumanBloodGroup rdf:ID="aboBloodGroupSystem">
+    <rdfs:comment xml:lang="en">The most important blood type system (or blood group system) in human blood transfusion.</rdfs:comment>
+  </HumanBloodGroup>
+  <VisualArt rdf:ID="craft">
+    <rdfs:comment xml:lang="en">Make by hand and with much skill.</rdfs:comment>
+  </VisualArt>
+  <NaturalLanguage rdf:ID="slovakLanguage">
+    <rdfs:comment xml:lang="en">The Slavic language spoken in Slovakia.</rdfs:comment>
+  </NaturalLanguage>
+  <EthnicGroup rdf:ID="luxembourgians">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Luxembourg.</rdfs:comment>
+  </EthnicGroup>
+  <Hockey rdf:ID="polo">
+    <rdfs:comment xml:lang="en">A game similar to field hockey but played on horseback using long-handled mallets and a wooden ball.</rdfs:comment>
+  </Hockey>
+  <EthnicGroup rdf:ID="polishG">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Poland.</rdfs:comment>
+  </EthnicGroup>
+  <EthnicGroup rdf:ID="swedishG">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Sweden.</rdfs:comment>
+  </EthnicGroup>
+  <NaturalLanguage rdf:ID="sloveneLanguage">
+    <rdfs:comment xml:lang="en">The Slavic language of Slovenes.</rdfs:comment>
+  </NaturalLanguage>
+  <Boxing rdf:ID="kickboxing">
+    <rdfs:comment xml:lang="en">Similar to boxing, but uses the feet as well as the hands for striking.</rdfs:comment>
+  </Boxing>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <NaturalLanguage rdf:about="#greekLanguage"/>
+      <NaturalLanguage rdf:about="#englishLanguage"/>
+      <NaturalLanguage rdf:about="#czechLanguage"/>
+      <NaturalLanguage rdf:about="#danishLanguage"/>
+      <NaturalLanguage rdf:ID="dutchLanguage">
+        <rdfs:comment xml:lang="en">The West Germanic language of the Netherlands.</rdfs:comment>
+      </NaturalLanguage>
+      <NaturalLanguage rdf:ID="estonianLanguage">
+        <rdfs:comment xml:lang="en">The official language of Estonia; belongs to the Baltic-Finnic family of languages.</rdfs:comment>
+      </NaturalLanguage>
+      <NaturalLanguage rdf:ID="finnishLanguage">
+        <rdfs:comment xml:lang="en">The official language of Finland; belongs to the Baltic Finnic family of languages.</rdfs:comment>
+      </NaturalLanguage>
+      <NaturalLanguage rdf:about="#frenchLanguage"/>
+      <NaturalLanguage rdf:ID="gaelicLanguage">
+        <rdfs:comment xml:lang="en">Any of several related languages of the Celts in Ireland and Scotland.</rdfs:comment>
+      </NaturalLanguage>
+      <NaturalLanguage rdf:about="#germanLanguage"/>
+      <NaturalLanguage rdf:about="#hungarianLanguage"/>
+      <NaturalLanguage rdf:about="#italianLanguage"/>
+      <NaturalLanguage rdf:about="#latvianLanguage"/>
+      <NaturalLanguage rdf:about="#lithuanianLanguage"/>
+      <NaturalLanguage rdf:ID="malteseLanguage">
+        <rdfs:comment xml:lang="en">The national language of Malta. The only Semitic language written in the Latin alphabet in its standard form.</rdfs:comment>
+      </NaturalLanguage>
+      <NaturalLanguage rdf:ID="polishLanguage">
+        <rdfs:comment xml:lang="en">The Slavic language of Poland.</rdfs:comment>
+      </NaturalLanguage>
+      <NaturalLanguage rdf:ID="portugueseLanguage">
+        <rdfs:comment xml:lang="en">The Romance language spoken in Portugal and Brazil.</rdfs:comment>
+      </NaturalLanguage>
+      <NaturalLanguage rdf:about="#slovakLanguage"/>
+      <NaturalLanguage rdf:about="#sloveneLanguage"/>
+      <NaturalLanguage rdf:about="#spanishLanguage"/>
+      <NaturalLanguage rdf:ID="swedishLanguage">
+        <rdfs:comment xml:lang="en">A Scandinavian language that is the official language of Sweden and one of two official languages of Finland.</rdfs:comment>
+      </NaturalLanguage>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <EthnicityAttribute rdf:ID="estonian">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Estonia.</rdfs:comment>
+  </EthnicityAttribute>
+  <Christianity rdf:ID="romanCatholicism">
+    <rdfs:comment xml:lang="en">The Christian Church in full communion with the Bishop of Rome, currently Pope Benedict XVI.</rdfs:comment>
+    <religiousBeliefOf>
+      <Christians rdf:ID="romanCatholics">
+        <religiousBelief rdf:resource="#romanCatholicism"/>
+        <rdfs:comment xml:lang="en">Members of the Roman Catholic Church.</rdfs:comment>
+      </Christians>
+    </religiousBeliefOf>
+  </Christianity>
+  <EthnicityAttribute rdf:ID="dutch">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of the Netherlands.</rdfs:comment>
+  </EthnicityAttribute>
+  <InTheWater rdf:ID="swimming">
+    <rdfs:comment xml:lang="en">Travel through water.</rdfs:comment>
+  </InTheWater>
+  <EthnicGroup rdf:ID="malteseG">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Malta.</rdfs:comment>
+  </EthnicGroup>
+  <EthnicGroup rdf:ID="estonians">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Estonia.</rdfs:comment>
+  </EthnicGroup>
+  <ReligiousBelief rdf:ID="rastafarian">
+    <rdfs:comment xml:lang="en">Follower of Rastafarianism.</rdfs:comment>
+  </ReligiousBelief>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <BeliefGroup rdf:about="#buddhists"/>
+      <BeliefGroup rdf:about="#hindus"/>
+      <BeliefGroup rdf:about="#jews"/>
+      <BeliefGroup rdf:about="#muslims"/>
+      <BeliefGroup rdf:about="#rastafarians"/>
+      <BeliefGroup rdf:about="#sikhs"/>
+      <BeliefGroup rdf:about="#voduns"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <EthnicityAttribute rdf:ID="italian">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Italy.</rdfs:comment>
+  </EthnicityAttribute>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <TeamSport rdf:ID="baseball">
+        <rdfs:comment xml:lang="en">A ball game played with a bat and ball between two teams of nine players; teams take turns at bat trying to score runs.</rdfs:comment>
+      </TeamSport>
+      <TeamSport rdf:ID="basketball">
+        <rdfs:comment xml:lang="en">A game played on a court by two opposing teams of 5 players; points are scored by throwing the ball through an elevated horizontal hoop.</rdfs:comment>
+      </TeamSport>
+      <TeamSport rdf:about="#handball"/>
+      <TeamSport rdf:ID="rugby">
+        <rdfs:comment xml:lang="en">A form of football played with an oval ball.</rdfs:comment>
+      </TeamSport>
+      <TeamSport rdf:about="#soccer"/>
+      <TeamSport rdf:about="#squash"/>
+      <TeamSport rdf:ID="volleyball">
+        <rdfs:comment xml:lang="en">A game in which two teams hit an inflated ball over a high net using their hands.</rdfs:comment>
+      </TeamSport>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <AthleticsSport rdf:ID="hiking">
+    <rdfs:comment xml:lang="en">Walk a long way, as for pleasure or physical exercise.</rdfs:comment>
+  </AthleticsSport>
+  <EthnicGroup rdf:ID="cyprians">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Cyprus.</rdfs:comment>
+  </EthnicGroup>
+  <EthnicGroup rdf:ID="finnishG">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Finland.</rdfs:comment>
+  </EthnicGroup>
+  <MartialArt rdf:ID="judo">
+    <rdfs:comment xml:lang="en">A sport adapted from jujitsu (using principles of not resisting) and similar to wrestling; developed in Japan.</rdfs:comment>
+  </MartialArt>
+  <EthnicityAttribute rdf:ID="slovak">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Slovakia.</rdfs:comment>
+  </EthnicityAttribute>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <EthnicGroup rdf:about="#greeks"/>
+      <EthnicGroup rdf:about="#italians"/>
+      <EthnicGroup rdf:about="#austrians"/>
+      <EthnicGroup rdf:about="#belgians"/>
+      <EthnicGroup rdf:about="#cyprians"/>
+      <EthnicGroup rdf:ID="czechs">
+        <rdfs:comment xml:lang="en">Belonging to the ethnic group of Czech Republic.</rdfs:comment>
+      </EthnicGroup>
+      <EthnicGroup rdf:about="#danishG"/>
+      <EthnicGroup rdf:about="#dutchG"/>
+      <EthnicGroup rdf:about="#englishG"/>
+      <EthnicGroup rdf:about="#estonians"/>
+      <EthnicGroup rdf:about="#finnishG"/>
+      <EthnicGroup rdf:about="#frenchG"/>
+      <EthnicGroup rdf:about="#germans"/>
+      <EthnicGroup rdf:ID="hungarians">
+        <rdfs:comment xml:lang="en">Belonging to the ethnic group of Hungary.</rdfs:comment>
+      </EthnicGroup>
+      <EthnicGroup rdf:about="#irishG"/>
+      <EthnicGroup rdf:about="#lithuanians"/>
+      <EthnicGroup rdf:about="#luxembourgians"/>
+      <EthnicGroup rdf:about="#malteseG"/>
+      <EthnicGroup rdf:about="#polishG"/>
+      <EthnicGroup rdf:about="#portugueseG"/>
+      <EthnicGroup rdf:about="#slovaks"/>
+      <EthnicGroup rdf:about="#slovenians"/>
+      <EthnicGroup rdf:about="#spanishG"/>
+      <EthnicGroup rdf:about="#swedishG"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <MartialArt rdf:ID="karate">
+    <rdfs:comment xml:lang="en">A traditional Japanese system of unarmed combat; sharp blows and kicks are given to pressure-sensitive points on the body of the opponent.</rdfs:comment>
+  </MartialArt>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <Art rdf:about="#broadcasting"/>
+      <Art rdf:about="#cinema"/>
+      <Art rdf:ID="literature">
+        <rdfs:comment xml:lang="en">Creative writing of recognized artistic value.</rdfs:comment>
+      </Art>
+      <Art rdf:about="#music"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <Christianity rdf:about="#easternRiteCatholicism"/>
+      <Christianity rdf:about="#orthodoxChristianity"/>
+      <Christianity rdf:about="#protestantism"/>
+      <Christianity rdf:about="#romanCatholicism"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <EthnicityAttribute rdf:ID="cyprian">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Cyprus.</rdfs:comment>
+  </EthnicityAttribute>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <MartialArt rdf:about="#aikido"/>
+      <MartialArt rdf:about="#judo"/>
+      <MartialArt rdf:about="#karate"/>
+      <MartialArt rdf:ID="taekwondo">
+        <rdfs:comment xml:lang="en">A Korean martial art similar to karate.</rdfs:comment>
+      </MartialArt>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <EthnicityAttribute rdf:ID="portuguese">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Portugal.</rdfs:comment>
+  </EthnicityAttribute>
+  <EthnicGroup rdf:ID="latvians">
+    <rdfs:comment xml:lang="en">Belonging to the ethnic group of Latvia.</rdfs:comment>
+  </EthnicGroup>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2, Build 355)  http://protege.stanford.edu -->
